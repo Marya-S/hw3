@@ -9,19 +9,19 @@ public class Main {
         if (osType == 0 && produceYear >= 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
-        if (osType == 0 && produceYear < 2015) {
+        else if (osType == 0 && produceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }
-        if (osType == 1 && produceYear >= 2015) {
+        else if (osType == 1 && produceYear >= 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
-        if (osType == 1 && produceYear < 2015) {
+        else if (osType == 1 && produceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
 
         System.out.println("****Задание 3*********");
-        int year = 205;
-        if (year % 4 == 0 && !(year % 100 == 0)) {
+        int year = 1600;
+        if (year % 4 == 0 && (!(year % 100 == 0) || (year%400==0))) {
             System.out.println(year + " год является високосным");
         } else {
             System.out.println(year + " год не является високосным");
@@ -33,13 +33,13 @@ public class Main {
         if (deliveryDistance < 20) {
             day += 1;
         }
-        if (deliveryDistance >= 20 && deliveryDistance < 60) {
+        else if (deliveryDistance >= 20 && deliveryDistance < 60) {
             day += 2;
         }
-        if (deliveryDistance >= 60 && deliveryDistance < 100) {
+        else if (deliveryDistance >= 60 && deliveryDistance < 100) {
             day += 3;
         }
-        if (deliveryDistance >= 100) {
+        else if (deliveryDistance >= 100) {
             day += 4;
         }
         System.out.println("Потребуется дней: " + day + " дней");
